@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "printing the fist msg"
+echo "Hellow world msg"
 
