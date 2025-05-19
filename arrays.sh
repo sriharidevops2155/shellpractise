@@ -3,4 +3,4 @@
 MOVIES=("Court" "HIT3" "Pushpa2" "Thandel")
 
 
-echo "first movie name is $MOVIES[0]"
+echo "first movie name is ${MOVIES[@]}"   # @ or * or %
