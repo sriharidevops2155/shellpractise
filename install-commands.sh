@@ -20,9 +20,3 @@ else
     echo "Install MYSQL is ...FAILURE"
     exit 1
 if 
-
-
-
-
-
-
