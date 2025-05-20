@@ -7,7 +7,6 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
 if [ $USERID -ne 0 ]
 then 
     echo -e "$R ERROR: Please run the user with root access $N"
@@ -15,7 +14,6 @@ then
 else 
     echo "You are running with root access"
 fi
-
 
 #validating if installation is sucedded or not 
 VALIDATE()
