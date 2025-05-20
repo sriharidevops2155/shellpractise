@@ -1,5 +1,8 @@
 #!/bin/bash
 
-\e[31m
+RED=\e[31m
 
-echo " colour are implemented"
+echo -e "\e[31m Colour are implemented"\
+
+echo "Hellow world no colours"
+
