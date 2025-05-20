@@ -46,7 +46,6 @@ if [ $? -ne 0 ]
 then 
     echo "python3 is not installed..... going to install"
     dnf install python3 -y 
-    if [ $? -eq 0 ]
     VALIDATE $? "Python3"
 else
     echo "python3 is already installed and nothing to do"
