@@ -13,7 +13,7 @@ fi
 
 dnf installed list mysql
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "MYSQL is not installed..... going to install"
     dnf install mysql -y 
