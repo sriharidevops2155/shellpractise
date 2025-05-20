@@ -10,6 +10,8 @@ else
     echo "You are running with root access"
 fi
 
+
+#validating if installation is sucedded or not 
 VALIDATE()
 {
     if [ $1 -eq 0 ]
@@ -26,7 +28,7 @@ if [ $? -ne 0 ]
 then 
     echo "MYSQL is not installed..... going to install"
     dnf install mysql -y 
-     VALIDATE $? "MySql"
+    VALIDATE $? "MySql"
 else 
     echo "MySQL is already installed and nothing to do"
 fi
