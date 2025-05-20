@@ -57,7 +57,7 @@ fi
 dnf list installed python3 &>>$LOG_FILE 
 if [ $? -ne 0 ]
 then 
-    echo "python3 is not installed..... going to install"
+    echo "python3 is not installed..... going to install" &>>$LOG_FILE
     dnf install python3 -y &>>$LOG_FILE 
     VALIDATE $? "Python3" &>>$LOG_FILE 
 else
