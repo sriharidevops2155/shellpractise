@@ -1,7 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -13,8 +12,6 @@ PACKAGES=("mysql" "python3" "nginx" "httpd")
 
 mkdir -p $LOGS_FOLDER
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE 
-
-
 
 if [ $USERID -ne 0 ]
 then 
@@ -32,7 +29,7 @@ VALIDATE()
        echo -e "Install $2 is ...$G SUCESS $N" | tee -a $LOG_FILE 
     else
        echo -e "Install $2 is ...$R FAILURE $N "| tee -a $LOG_FILE 
-        exit 1
+       exit 1
     fi
 }
 
