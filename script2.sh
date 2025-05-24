@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "PID of Script-2: $$"
 
