@@ -11,4 +11,4 @@
 while IFS= read -r line #Internal Field Separator and -r is it to print for special characters as well 
 do 
     echo $line
-done < delete-oldlogs.sh
+done < set.sh
