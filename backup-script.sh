@@ -44,7 +44,7 @@ USAGE()
     echo -e "$R USAGE:: $N sh 20-backup.sh <source-dir> <dest-dir> <days(optional)>"
 }
 
-if [$# -lt 2 ]
+if [ $# -lt 2 ]
 then 
     USAGE 
 fi
