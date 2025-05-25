@@ -35,13 +35,13 @@ VALIDATE()
 
 mkdir -p $LOGS_FOLDER
 
-echo "Script started executing at $(date)" tee -a $LOG_FILE 
+echo "Script started executing at $(date)" | tee -a $LOG_FILE 
 
 FILES_TO_DEL=$(find $SOURCE_DIR -name "*.log" -mtime +14 )
 while IFS= read -r filepath 
 do
-   echo "Deleting file $filepath" tee -a $LOG_FILE 
-   rm -rf $filepath tee -a $LOG_FILE 
+   echo "Deleting file $filepath" | tee -a $LOG_FILE 
+   rm -rf $filepath | tee -a $LOG_FILE 
 done <<< $FILES_TO_DEL
 
 echo "Script executed sucessfully"
