@@ -1,5 +1,6 @@
 #!/bin/bash
 
+USERID 
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}  # :- if DAYS are provided that will be considered, otherwise default 14 days
@@ -61,7 +62,7 @@ then
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime + $DAYS)
 
 if [ ! -z $FILES ]
 then
