@@ -51,13 +51,22 @@ fi
 
 if [ ! -d $SOURCE_DIR ]
 then 
-    echo -e "$R Source file  $SOURCE_DIR doesn't exist. Please check $N"
+    echo -e "$R Source directory  $SOURCE_DIR doesn't exist. Please check $N"
     exit 1
 fi
 
 if [ ! -d $DEST_DIR ]
 then 
-    echo -e "$R Destination file $DEST_DIR doesn't exist. Please check $N"
+    echo -e "$R Destination directory $DEST_DIR doesn't exist. Please check $N"
     exit 1
+fi
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+if [ ! -z $FILES ]
+then
+    echo "Files found"
+else 
+    echo -e "No log files found older than 14 days... $Y Skipping $N"
 fi
 
