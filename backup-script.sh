@@ -74,7 +74,7 @@ then
     if [ -f $ZIP_FILE ]
     then 
         echo -e "Sucessfully created zip file"
-        FILES_TO_DEL=$(find $SOURCE_DIR -name "*.log" -mtime +14 )
+        FILES_TO_DEL=$(find $SOURCE_DIR -name "*.log" -mtime +14)
         while IFS= read -r filepath 
         do
         echo "Deleting file $filepath" | tee -a $LOG_FILE 
@@ -85,8 +85,6 @@ then
         echo -e "Zip file creation....... $R FAILED"
         exit 1
     fi
-    
-
 else 
     echo -e "No log files found older than 14 days... $Y Skipping $N"
 fi
