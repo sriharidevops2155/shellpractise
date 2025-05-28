@@ -11,8 +11,9 @@ do
     echo "$PARTITION: $USUAGE"
     if [ $USUAGE -ge $DISK_THRESHOLD ]
     then 
-        MSG="High Disk Usuage on $PARTITIO: $USUAGE"
+        MSG+="High Disk Usuage on $PARTITIO: $USUAGE"
     fi
 done <<<$DISK_USUAGE
 
+echo $MSG
 
