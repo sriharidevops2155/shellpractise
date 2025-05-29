@@ -15,7 +15,6 @@ FINAL_BODY=$(sed -e "s/TO_TEAM/M/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/IP_ADD
 echo "To: $TO_ADDRESS"
 echo "Subject: $SUBJECT"
 echo "Content-Type: text/html"
-echo ""
 echo "$FINAL_BODY"
 } | msmtp "$TO_ADDRESS"
 
