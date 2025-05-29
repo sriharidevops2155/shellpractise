@@ -8,10 +8,10 @@ while IFS= read line
 do 
     USUAGE=$(echo $line | awk '{print $6f}' | cut -d "%" -f1)
     PARTITION=$(echo $line | awk '{print $7f}')
-    echo "$PARTITION: $USUAGE"
+    #echo "$PARTITION: $USUAGE"
     if [ $USUAGE -ge $DISK_THRESHOLD ]
     then 
-        MSG+="High Disk Usuage on $PARTITION: $USUAGE \n"
+        MSG+="High Disk Usuage on $PARTITION: $USUAGE \n"   # + near msg will append result of each loop  && \n is for new line
     fi
 done <<<$DISK_USUAGE
 
