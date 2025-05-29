@@ -12,7 +12,7 @@ do
     #echo "$PARTITION: $USUAGE"
     if [ $USUAGE -ge $DISK_THRESHOLD ]
     then 
-        MSG+="High Disk Usuage on $PARTITION: $USUAGE \n"   # + near msg will append result of each loop  && \n is for new line
+        MSG+="High Disk Usuage on $PARTITION: $USUAGE % <br>"   # + near msg will append result of each loop  && \n is for new line
     fi
 done <<< $DISK_USUAGE
 
