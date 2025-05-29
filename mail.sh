@@ -5,7 +5,7 @@ ALERT_TYPE=$2
 IP_ADDRESS=$3
 MSG=$4
 FINAL_MSG=(printf '%s\n' "$MSG" | sed -e 's/[]\/$*.^[]/\\&/g')
-TO_ADDRESS=$4
+TO_ADDRESS=$5
 SUBJECT=$6
 
 FINAL_BODY=$(sed -e "s/TO_TEAM/M/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/IP_ADDRESS/$IP_ADDRESS/g" -e "s/MSG/$MSG/g" template.html)
